@@ -11,6 +11,11 @@ namespace FindMaximumNumber
         static void Main(string[] args)
         {
             Console.WriteLine("Welcom to Maximum Number Problem");
+           int result= MaximumNumber.Maximum(1,2,3);
+            Console.WriteLine(result);
+            Console.ReadKey();
+            
+
         }
     }
 }

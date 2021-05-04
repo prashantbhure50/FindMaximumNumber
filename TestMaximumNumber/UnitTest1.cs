@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using FindMaximumNumber;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace TestMaximumNumber
@@ -6,9 +7,24 @@ namespace TestMaximumNumber
     [TestClass]
     public class UnitTest1
     {
+        
         [TestMethod]
-        public void TestMethod1()
+        public void GivenMaxIntegerAtFirstPosition_WhenCheck_ShouldReurnMaximumInteger()
         {
+            int result=MaximumNumber.Maximum(3,2,1);
+            Assert.AreEqual(result, 3);
+        }
+        [TestMethod]
+        public void GivenMaxIntegerAtSecondPosition_WhenCheck_ShouldReurnMaximumInteger()
+        {
+            int result = MaximumNumber.Maximum(1,3,2);
+            Assert.AreEqual(result, 3);
+        }
+        [TestMethod]
+        public void GivenMaxIntegerAtThirdPosition_WhenCheck_ShouldReurnMaximumInteger()
+        {
+            int result = MaximumNumber.Maximum(1,2,3);
+            Assert.AreEqual(result, 3);
         }
     }
 }
