@@ -26,5 +26,11 @@ namespace TestMaximumNumber
             int result = MaximumNumber.Maximum(1,2,3);
             Assert.AreEqual(result, 3);
         }
+        [TestMethod]
+        public void GivenMaxFloat_WhenCheck_ShouldReurnMaximumFloatValue()
+        {
+            float result = MaximumNumber.Maximum(1.1f, 2.4f, 3.4f);
+            Assert.AreEqual(result, 3.4f);
+        }
     }
 }
