@@ -32,5 +32,11 @@ namespace TestMaximumNumber
             float result = MaximumNumber.Maximum(1.1f, 2.4f, 3.4f);
             Assert.AreEqual(result, 3.4f);
         }
+        [TestMethod]
+        public void GivenMaxString_WhenCheck_ShouldReurnMaximumStringValue()
+        {
+            string result = MaximumNumber.Maximum("Apple","Peach","banana");
+            Assert.AreEqual(result, "Peach");
+        }
     }
 }
