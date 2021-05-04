@@ -34,10 +34,11 @@ namespace FindMaximumNumber
                 throw new Exception("firstNumber,secondNumber,ThirdNumber are same");
             
         }
-        public void maxMethod()
+        public T maxMethod()
         {
             T max = MaximumNumber<T>.Maximum(this.firstNumber,this.secondNumber,this.thirdNumber);
-            Console.WriteLine(max);
+            
+            return max;
            
         }
       

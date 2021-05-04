@@ -12,11 +12,11 @@ namespace FindMaximumNumber
         {
             Console.WriteLine("Welcom to Maximum Number Problem");
             MaximumNumber<int> maxInteger = new MaximumNumber<int>(4,2,3);
-            maxInteger.maxMethod();
+            Console.WriteLine("MaxInteger - "+maxInteger.maxMethod());
             MaximumNumber<float> maxFloat = new MaximumNumber<float>(4.3f, 2.3f, 3.3f);
-            maxFloat.maxMethod();
+            Console.WriteLine( "MaxFloat - "+maxFloat.maxMethod());
             MaximumNumber<double> maxDouble = new MaximumNumber<double>(4.3, 2.3, 5.3);
-            maxDouble.maxMethod();
+            Console.WriteLine( "MaxString - "+maxDouble.maxMethod());
            Console.ReadKey();
             
 
