@@ -6,61 +6,40 @@ using System.Threading.Tasks;
 
 namespace FindMaximumNumber
 {
-   public class MaximumNumber
+   public class MaximumNumber<T> where T:IComparable
     {
-        public static int Maximum(int firstNumber,int secondtNumber,int thirdtNumber)
+        public T firstNumber, secondNumber, thirdNumber;
+        public MaximumNumber(T firstNumber, T secondNumber, T thirdNumber)
+        {
+            this.firstNumber = firstNumber;
+            this.secondNumber = secondNumber;
+            this.thirdNumber = thirdNumber;
+
+        }
+        public static  T Maximum (T firstNumber,T secondNumber,T thirdNumber)
         {
            
-                if (firstNumber.CompareTo(secondtNumber) > 0 && firstNumber.CompareTo(thirdtNumber) > 0)
+                if (firstNumber.CompareTo(secondNumber) > 0 && firstNumber.CompareTo(thirdNumber) > 0)
                 {
                     return firstNumber;
                 }
-                else if (secondtNumber.CompareTo(firstNumber) > 0 && secondtNumber.CompareTo(thirdtNumber) > 0)
+                else if (secondNumber.CompareTo(firstNumber) > 0 && secondNumber.CompareTo(thirdNumber) > 0)
                 {
-                    return secondtNumber;
+                    return secondNumber;
                 }
-                else if (thirdtNumber.CompareTo(secondtNumber) > 0 && thirdtNumber.CompareTo(firstNumber) > 0)
+                else if (thirdNumber.CompareTo(secondNumber) > 0 && thirdNumber.CompareTo(firstNumber) > 0)
                 {
-                    return thirdtNumber;
+                    return thirdNumber;
                 }
                 throw new Exception("firstNumber,secondNumber,ThirdNumber are same");
             
         }
-        public static float Maximum(float firstNumber, float secondtNumber, float thirdtNumber)
+        public void maxMethod()
         {
-
-            if (firstNumber.CompareTo(secondtNumber) > 0 && firstNumber.CompareTo(thirdtNumber) > 0)
-            {
-                return firstNumber;
-            }
-            else if (secondtNumber.CompareTo(firstNumber) > 0 && secondtNumber.CompareTo(thirdtNumber) > 0)
-            {
-                return secondtNumber;
-            }
-            else if (thirdtNumber.CompareTo(secondtNumber) > 0 && thirdtNumber.CompareTo(firstNumber) > 0)
-            {
-                return thirdtNumber;
-            }
-            throw new Exception("firstNumber,secondNumber,ThirdNumber are same");
-
+            T max = MaximumNumber<T>.Maximum(this.firstNumber,this.secondNumber,this.thirdNumber);
+            Console.WriteLine(max);
+           
         }
-        public static string Maximum(string firstNumber, string secondtNumber, string thirdtNumber)
-        {
-
-            if (firstNumber.CompareTo(secondtNumber) > 0 && firstNumber.CompareTo(thirdtNumber) > 0)
-            {
-                return firstNumber;
-            }
-            else if (secondtNumber.CompareTo(firstNumber) > 0 && secondtNumber.CompareTo(thirdtNumber) > 0)
-            {
-                return secondtNumber;
-            }
-            else if (thirdtNumber.CompareTo(secondtNumber) > 0 && thirdtNumber.CompareTo(firstNumber) > 0)
-            {
-                return thirdtNumber;
-            }
-            throw new Exception("firstNumber,secondNumber,ThirdNumber are same");
-
-        }
+      
     }
 }

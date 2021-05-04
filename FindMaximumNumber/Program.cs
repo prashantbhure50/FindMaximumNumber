@@ -6,20 +6,22 @@ using System.Threading.Tasks;
 
 namespace FindMaximumNumber
 {
-    class Program
+    class Program 
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Welcom to Maximum Number Problem");
-            int maxInteger= MaximumNumber.Maximum(1,2,3);
-            Console.WriteLine(maxInteger);
-            float maxFloat= MaximumNumber.Maximum(1.2f, 2.3f, 3.3f);
-            Console.WriteLine(maxFloat);
-            string maxString = MaximumNumber.Maximum("Apple","Peach","Banana");
-            Console.WriteLine(maxString);
-            Console.ReadKey();
+            MaximumNumber<int> maxInteger = new MaximumNumber<int>(4,2,3);
+            maxInteger.maxMethod();
+            MaximumNumber<float> maxFloat = new MaximumNumber<float>(4.3f, 2.3f, 3.3f);
+            maxFloat.maxMethod();
+            MaximumNumber<double> maxDouble = new MaximumNumber<double>(4.3, 2.3, 5.3);
+            maxDouble.maxMethod();
+           Console.ReadKey();
             
 
         }
+
+       
     }
 }
